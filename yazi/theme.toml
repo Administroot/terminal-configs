@@ -5,7 +5,7 @@
 # vim:fileencoding=utf-8:foldmethod=marker
 
 [flavor]
-use = ""
+dark = "dracula"
 
 
 [manager]
@@ -15,7 +15,7 @@ tab_width = 12
 
 # Border
 border_symbol = " "
-border_style  = { fg = "gray" }
+border_style = { fg = "gray" }
 
 # Highlighting
 syntect_theme = ""
@@ -23,4 +23,4 @@ syntect_theme = ""
 [status]
 mode_normal = { bg = "blue", bold = true }
 mode_select = { bg = "red", bold = true }
-mode_unset  = { bg = "yellow", bold = true }
+mode_unset = { bg = "yellow", bold = true }

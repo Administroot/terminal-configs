@@ -1,5 +1,59 @@
-[plugin]
-deps = [{ use = "llanosrocas/yaziline", rev = "5886330" }, { use = "Rolv-Apneseth/starship", rev = "247f49d" }, { use = "yazi-rs/plugins:git", rev = "ec97f88" }, { use = "yazi-rs/plugins:smart-enter", rev = "7afba3a" }, { use = "h-hg/yamb", rev = "108347b" }, { use = "KKV9/compress", rev = "60b24af" }]
+[[plugin.deps]]
+use = "llanosrocas/yaziline"
+rev = "5886330"
+hash = "b8f4326ff78e7337f2f5d75bd1ab3e02"
 
-[flavor]
-deps = []
+[[plugin.deps]]
+use = "yazi-rs/plugins:git"
+rev = "ec97f88"
+hash = "8467272d9b44381b0d8b0f5ddaa5729d"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:smart-enter"
+rev = "7afba3a"
+hash = "d984dc1e15079e6156a05544c0f17262"
+
+[[plugin.deps]]
+use = "h-hg/yamb"
+rev = "108347b"
+hash = "c435037781f8caf33306bc870c18a63"
+
+[[plugin.deps]]
+use = "KKV9/compress"
+rev = "60b24af"
+hash = "4808a9f0e7aec3b7c0cfadcd0ba8c1f0"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:diff"
+rev = "5186af7"
+hash = "fb4650dc4e95b9b56dcadab3608dcfed"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:full-border"
+rev = "5186af7"
+hash = "206e2448171dad0bda0a3cdece4ee8f5"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:mount"
+rev = "5186af7"
+hash = "697dcc5de987dc8d7ef7e7476966697a"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:smart-filter"
+rev = "5186af7"
+hash = "f9d872e5bd1aac3a153dee63c2bbc618"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:toggle-pane"
+rev = "5186af7"
+hash = "98dfe8fd31e195ea3dc1a16d2d56941e"
+
+[[plugin.deps]]
+use = "Rolv-Apneseth/starship"
+rev = "6c639b4"
+hash = "f0aaa1fffa27f0747a378fe161e17259"
+
+[[flavor.deps]]
+use = "yazi-rs/flavors:dracula"
+rev = "df95930"
+hash = "e1b8aa29fbd56413ee8ae39afa85b326"
