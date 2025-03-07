@@ -49,6 +49,7 @@ ranger/plugins/devicons_linemode.pyo
 !/yazi
 !/*.bttpreset
 !/taplo.toml
+!/wezterm
 
 jesseduffield/lazynpm/state.yml
 
