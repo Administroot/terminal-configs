@@ -34,7 +34,7 @@ prepend_keymap = [
   { on = [
     "g",
     "h",
-  ], run = "cd C:/Users/pv/OneDrive/Desktop", desc = "Go home" },
+  ], run = "cd ~/Desktop", desc = "Go home" },
   { on = [
     "g",
     "c",
@@ -50,11 +50,19 @@ prepend_keymap = [
   { on = [
     "g",
     "p",
-  ], run = "cd D:/Rust_projects", desc = "Goto Rust_projects" },
+  ], run = "cd D:/Rust_projects", desc = "Goto Rust Projects" },
   { on = [
     "g",
     "o",
   ], run = "cd D:/obsidian-repos/obsidian-for-gitee", desc = "Goto Obsidian Repos" },
+  { on = [
+    "g",
+    "z",
+  ], run = "cd ~/OneDrive", desc = "Goto OneDrive Dir" },
+  { on = [
+    "g",
+    "a",
+  ], run = "cd %AppData%", desc = "Goto AppData Dir" },
   # { on = "-", run = "", desc = "Symlink the absolute path of yanked files" },
   # { on = "_", run = "PowerShell -Command \"$yanked = '%yanked%'; $relative = Resolve-Path $yanked -Relative; $link = Join-Path (Get-Location) (Split-Path $yanked -Leaf); if (Test-Path -Path $link) { Write-Host 'Link Existed' -ForegroundColor Red } else { cmd /c mklink $link $relative }\"", desc = "Symlink the relative path of yanked files" },
 ]

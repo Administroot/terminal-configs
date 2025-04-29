@@ -50,7 +50,8 @@ reveal = [
 extract = [
   { run = 'ya pub extract --list "$@"', desc = "Extract here", for = "unix" },
   # { run = 'ya pub extract --list %*', desc = "Extract here", for = "windows" },
-  { run = '7z e %*', desc = "Extract here", for = "windows" },
+  # 下面这行命令原来为 7z e %*
+  { run = '7z x %*', desc = "Extract here", for = "windows" },
 
 ]
 play = [
@@ -58,10 +59,11 @@ play = [
   { run = 'mpv --force-window %*', orphan = true, for = "windows" },
   { run = '''mediainfo "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show media info", for = "unix" },
 ]
-compress = [
-  { run = '7z a Compressed-file.7z %*', desc = "compress", for = "windows" },
-  { run = 'tar -czf "$@"', desc = "compress", for = "unix" },
-]
+# 这个有bug暂时不用，用archive就行
+# compress = [
+#   { run = '7z a Compressed-file.7z %*', desc = "Compress" for = "windows" },
+#   { run = 'tar -czf "$@"', desc = "compress" for = "unix" },
+# ]
 
 
 [open]
@@ -71,48 +73,40 @@ rules = [
   { name = "*/", use = [
     "edit",
     "open",
-    "reveal",
-    "compress",
+    "reveal",    
   ] },
   # Text
   { mime = "text/*", use = [
     "edit",
     "reveal",
-    "compress",
   ] },
   # Image
   { mime = "image/*", use = [
     "open",
     "reveal",
-    "compress",
   ] },
   # Media
   { mime = "{audio,video}/*", use = [
     "play",
     "reveal",
-    "compress",
   ] },
   # Archive
   { mime = "application/{,g}zip", use = [
     "extract",
     "reveal",
-    "compress",
   ] },
   { mime = "application/{tar,bzip*,7z*,xz,rar}", use = [
     "extract",
     "reveal",
-    "compress",
   ] },
   # JSON
   { mime = "application/{json,ndjson}", use = [
     "edit",
     "reveal",
-    "compress",
   ] },
   { mime = "*/javascript", use = [
     "edit",
     "reveal",
-    "compress",
   ] },
   # Empty file
   { mime = "inode/empty", use = [
@@ -123,39 +117,32 @@ rules = [
   # Krita
   { name = "*.kra", use = [
     "open",
-    "compress",
   ] },
   # MS files
   { name = "*.{xlsx,xls,doc,docx,ppt,pptx,pptm}", use = [
     "open",
-    "compress",
   ] },
   # WPS
   { name = "*.{wps,wpt,et,dps}", use = [
     "open",
-    "compress",
   ] },
   # PDF
   { name = "*.pdf", use = [
     "open",
-    "compress",
   ] },
   # Executable
   { name = "*.exe", use = [
     "open",
-    "compress",
   ] },
   # Caj
   { name = "*.caj", use = [
     "open",
-    "compress",
   ] },
   # Fallback
   { name = "*", use = [
     "edit",
     "open",
     "reveal",
-    "compress",
   ] },
 ]
 

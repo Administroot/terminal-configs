@@ -7,7 +7,13 @@ local config = wezterm.config_builder()
 --- THEMES
 -- For example, changing the color scheme:
 config.color_scheme = "Catppuccin Macchiato"
-config.font = wezterm.font("JetBrains Mono")
+config.font = wezterm.font_with_fallback({
+	-- "Inter",
+	"JetBrains Mono",
+	"Fira Code",
+	"fangsong",
+	"source-han-sans",
+})
 config.window_frame = {
 	-- The font used in the tab bar.
 	-- Roboto Bold is the default; this font is bundled
@@ -49,8 +55,8 @@ config.default_prog = { "pwsh", "-l" }
 
 -- PLUGINS
 
-wezterm.plugin.require("https://github.com/yriveiro/wezterm-status").apply_to_config(config)
 wezterm.plugin.require("https://github.com/adriankarlen/bar.wezterm").apply_to_config(config)
+wezterm.plugin.require("https://github.com/yriveiro/wezterm-status").apply_to_config(config)
 
 -- and finally, return the configuration to wezterm
 return config
