@@ -50,6 +50,7 @@ ranger/plugins/devicons_linemode.pyo
 !/*.bttpreset
 !/taplo.toml
 !/wezterm
+!/archlinux-wsl
 
 jesseduffield/lazynpm/state.yml
 
