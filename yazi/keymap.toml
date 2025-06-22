@@ -2,15 +2,17 @@
 # If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
 "$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
 
-[manager]
+[mgr]
 prepend_keymap = [
-  { on = "T", run = "plugin toggle-pane max-preview" },
+  { on = "z", run = "plugin zoxide", desc = "Jump to a directory via zoxide"},
+  { on = "Z", run = "plugin fzf", desc = "Jump to a file/dir via fzf"},
+  { on = "T", run = "plugin toggle-pane max-preview", desc = "Fullscreen browse mode"},
   { on = "F", run = "plugin smart-filter", desc = "Smart filter" },
-  { on = "M", run = "plugin mount" },
-  { on = "<C-d>", run = "plugin diff", desc = "Diff the selected with the hovered file" },
-  { on = "i", run = 'plugin smart-enter' },
-  { on = "<Enter>", run = 'plugin smart-enter' },
-  { on = "S", run = 'shell "$SHELL" --block --confirm' },
+  { on = "M", run = "plugin mount", desc = "Check mount device status"},
+  { on = "<C-d>", run = "plugin diff", desc = "Diff selected files with hovered ones" },
+  { on = "i", run = 'plugin smart-enter', desc = "Smarter Enter"},
+  { on = "<Enter>", run = 'plugin smart-enter', desc = "Smarter Enter"},
+  { on = "S", run = 'shell "$SHELL" --block --confirm', desc = "Run Command"},
   { on = [
     "'",
     "a",
