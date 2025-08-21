@@ -52,11 +52,11 @@ prepend_keymap = [
   { on = [
     "g",
     "p",
-  ], run = "cd D:/Rust_projects", desc = "Goto Rust Projects" },
+  ], run = "cd D:/projects", desc = "Goto Projects" },
   { on = [
     "g",
     "o",
-  ], run = "cd D:/obsidian-repos/obsidian-for-gitee", desc = "Goto Obsidian Repos" },
+  ], run = "cd D:/projects/obsidian-for-gitee", desc = "Goto Obsidian Repos" },
   { on = [
     "g",
     "z",
